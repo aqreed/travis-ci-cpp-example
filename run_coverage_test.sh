@@ -13,7 +13,7 @@ make
 
 # gcov is the gcc suite test coverage program.  We're interested in the coverage
 # the lib.c file.  
-gcov lib.c
+gcov lib.cpp
 
 # now the code coverage is in this file:
 # lib.c.gcov  
