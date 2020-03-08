@@ -1,20 +1,16 @@
 #!/bin/bash
+# calls the code coverage testing program gcov
 
-#this script calls the code coverage testing program gcov (part of the gcc suite)
-
-#fist clean all object files
+# fist clean all object files
 make clean
 
-#compile all the c files, link etc
+# compile all the cpp files, link etc
 make 
 
-# run the example.out program ... with test coverage (see makefile for flags)
-./test-library.out
+# run test-library.out, with test coverage (see makefile flags)
+./test/test-library
 
-# gcov is the gcc suite test coverage program.  We're interested in the coverage
-# the lib.c file.  
-gcov lib.cpp
+# gcc suite test coverage program
+gcov test/lib.cpp
 
-# now the code coverage is in this file:
-# lib.c.gcov  
-# which can be viewed in any text editor 
+# code coverage is in the file "lib.cpp.gcov"
