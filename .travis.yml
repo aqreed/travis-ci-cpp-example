@@ -1,5 +1,5 @@
 #travis configuration for coverage testing
-language: c
+language: cpp
 
 #sudo: false # only for faster builds
 
@@ -24,7 +24,7 @@ compiler:
 # Build steps
 script: 
   - cd ${TRAVIS_BUILD_DIR}
-  - make && ./test-library.out
+  - make && ./test/test-library
 
 after_success:
 - cd ${TRAVIS_BUILD_DIR}
